@@ -5,11 +5,13 @@ a = [int(i) for i in input('Введите список: ').split(' ')]
 a.sort()
 mid = 0
 if len(a) % 2 == 0:
+    i = int((len(a) / 2) - 0.5)
+    j = int((len(a) / 2) + 0.5)
+    mid = (a[i] + a[j]) / 2
+else:
     i = int(len(a)/2)
     mid = a[i]
-else:
-    i = int((len(a)/2) - 0.5)
-    j = int((len(a)/2) + 0.5)
-    mid = (a[i] + a[j])/2
+
+
 print('Отсортированный список:', a, '\nМедиана:', mid)
 
